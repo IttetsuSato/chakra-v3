@@ -1,11 +1,23 @@
 import { Button, HStack } from "@chakra-ui/react";
 
 export default function Home() {
+  // 'solid' | 'subtle' | 'surface' | 'outline' | 'ghost' | 'plain'
+  const vaiants = [
+    "solid",
+    "outline",
+    "ghost",
+  ] as const;
+
   return (
     <HStack padding={4} gap={4}>
-      <Button colorPalette="blue">button</Button>
-      <Button colorPalette="blue" variant="outline">button</Button>
-      <Button colorPalette="blue" variant="surface">button</Button>
+      {vaiants.map((variant) => (
+        <Button key={variant} variant={variant}>
+          {variant}
+        </Button>
+      ))}
+      {/* <IconButton colorPalette="blue" variant="outline" aria-label="Search database">
+        <LuSearch />
+      </IconButton> */}
     </HStack>
   );
 }

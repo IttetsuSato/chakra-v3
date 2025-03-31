@@ -1,7 +1,19 @@
 import { createSystem, defaultConfig, defineConfig } from "@chakra-ui/react";
+import { buttonRecipe } from "./button.recipe";
 
 const config = defineConfig({
+  globalCss: {
+    "html, body": {
+      // backgroundColor: "green.100",
+    },
+    html: {
+      colorPalette: "blue",
+    },
+  },
   theme: {
+    // recipes: {
+    //   button: buttonRecipe,
+    // },
     tokens: {
       colors: {
         blue: {
