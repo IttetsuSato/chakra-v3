@@ -11,9 +11,9 @@ const config = defineConfig({
     },
   },
   theme: {
-    // recipes: {
-    //   button: buttonRecipe,
-    // },
+    recipes: {
+      button: buttonRecipe,
+    },
     tokens: {
       colors: {
         blue: {
